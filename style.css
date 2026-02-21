@@ -1,0 +1,135 @@
+:root {
+  --bg: #0a0a0a;
+  --white: #ffffff;
+  --accent: #ff4d4d;
+  --glass: rgba(255,255,255,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Clash Display';
+  font-size: 28px;
+}
+
+.nav-links a {
+  margin-left: 32px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  position: relative;
+}
+
+.hero-content h2 {
+  font-family: 'Clash Display';
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  max-width: 420px;
+  opacity: 0.8;
+}
+
+.cta {
+  margin-top: 40px;
+  padding: 16px 40px;
+  border-radius: 40px;
+  background: var(--accent);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #ff4d4d, transparent 60%);
+  filter: blur(120px);
+  right: -200px;
+  top: -100px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 160px 80px;
+}
+
+.section.dark {
+  background: #111;
+}
+
+.section h3 {
+  font-family: 'Clash Display';
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 40px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  font-size: 20px;
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* CURSOR */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
