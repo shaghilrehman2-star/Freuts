@@ -1,3 +1,15 @@
+body {
+  position: relative;
+  z-index: 1;
+}
+
+.hero,
+.section,
+nav,
+footer {
+  position: relative;
+  z-index: 2;
+}
 :root {
   --bg: #0a0a0a;
   --white: #ffffff;
