@@ -1,14 +1,20 @@
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
 body {
   position: relative;
   z-index: 1;
 }
+.section {
+  min-height: 100vh;
+}
 
-.hero,
-.section,
-nav,
-footer {
-  position: relative;
-  z-index: 2;
+.hero {
+  min-height: 100vh;   /* NOT height */
+  display: flex;
+  align-items: center;
+}
 }
 :root {
   --bg: #0a0a0a;
