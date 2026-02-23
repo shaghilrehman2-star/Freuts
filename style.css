@@ -78,15 +78,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 24px 60px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 100;
-}
 
 .logo {
   font-family: 'Clash Display';
