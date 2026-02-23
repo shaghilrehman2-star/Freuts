@@ -1,70 +1,4 @@
-body, 
-section, 
-.hero {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: #0a0a0a;
-  color: white;
-  overflow-x: hidden;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  overflow-x: hidden;
-  background: #0a0a0a;
-  color: white;
-}
-.section {
-  min-height: 100vh;
-}
-
-.hero {
- /* CTA button */
-.cta {
-  margin-top: 30px;
-  padding: 14px 36px;
-  background: #ff4d4d;
-  color: white;
-  border: none;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-block;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(255, 77, 77, 0.45);
-  background: #ff6a6a;
-}
-
-.cta:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(255, 77, 77, 0.3);
-}
-:root {
-  --bg: #0a0a0a;
-  --white: #ffffff;
-  --accent: #ff4d4d;
-  --glass: rgba(255,255,255,0.08);
-}
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -72,19 +6,17 @@ html, body {
 }
 
 body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 /* NAV */
 nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  padding: 24px 80px;
+  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,23 +24,21 @@ nav {
 }
 
 .logo {
-  font-family: 'Clash Display';
   font-size: 28px;
-  color: white;
+  font-weight: 700;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .nav-links a {
   padding: 10px 22px;
   border-radius: 999px;
-  background: rgba(30, 60, 40, 0.65);
-  color: #ffffff;
+  background: rgba(30, 90, 60, 0.6);
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
   transition: all 0.25s ease;
 }
 
@@ -117,107 +47,11 @@ nav {
   box-shadow: 0 0 20px rgba(30, 127, 85, 0.6);
   transform: translateY(-2px);
 }
+
 /* HERO */
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 80px;
-  position: relative;
 }
-
-.hero-content h2 {
-  font-family: 'Clash Display';
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.95;
-}
-
-.hero-content p {
-  margin-top: 20px;
-  max-width: 420px;
-  opacity: 0.8;
-}
-
-.cta {
-  margin-top: 40px;
-  padding: 16px 40px;
-  border-radius: 40px;
-  background: var(--accent);
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.hero-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, #ff4d4d, transparent 60%);
-  filter: blur(120px);
-  right: -200px;
-  top: -100px;
-}
-
-/* SECTIONS */
-.section {
-  position: relative;
-  min-height: 100vh;
-  padding: 120px 80px;
-  z-index: 3;
-}
-
-.section.dark {
-  background: #111;
-}
-
-.section h3 {
-  font-family: 'Clash Display';
-  font-size: 48px;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-}
-
-/* Cards interaction */
-.card {
-  background: linear-gradient(145deg, #111, #1a1a1a);
-  padding: 40px 28px;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-/* FOOTER */
-footer {
-  padding: 40px;
-  text-align: center;
-  opacity: 0.6;
-}
-
-/* CURSOR */
-.cursor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  position: fixed;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  z-index: 1000;
-}
-
