@@ -93,6 +93,21 @@ nav {
   font-size: 28px;
 }
 
+  header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
   /* Navbar hover underline */
 .nav-links a {
   margin-left: 16px;
