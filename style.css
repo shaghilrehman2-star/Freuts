@@ -1,3 +1,10 @@
+body, 
+section, 
+.hero {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
 html {
   scroll-behavior: smooth;
 }
