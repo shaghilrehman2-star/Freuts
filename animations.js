@@ -1,27 +1,21 @@
-// Scroll-driven cinematic animations
+// GSAP basic scroll animations
 gsap.registerPlugin(ScrollTrigger);
 
-// Hero glow reacts to scroll
-gsap.to(".hero-glow", {
-  scale: 2,
+gsap.from(".hero h2", {
+  y: 80,
   opacity: 0,
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "top top",
-    end: "bottom top",
-    scrub: true
-  }
+  duration: 1,
+  ease: "power3.out"
 });
 
-// Sections fade & rise on scroll
 gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section, {
-    y: 80,
-    opacity: 0,
-    duration: 1,
     scrollTrigger: {
       trigger: section,
       start: "top 80%"
-    }
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1
   });
 });
