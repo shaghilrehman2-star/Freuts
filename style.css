@@ -78,15 +78,11 @@ body {
   overflow-x: hidden;
 }
 
-
-.logo {
-  font-family: 'Clash Display';
-  font-size: 28px;
-}
-
-  header {
+/* NAV */
+nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 24px 80px;
   display: flex;
@@ -95,11 +91,32 @@ body {
   z-index: 100;
 }
 
-.nav-links {
-  display: flex;
-  gap: 24px;
+.logo {
+  font-family: 'Clash Display';
+  font-size: 28px;
+  color: white;
 }
 
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(30, 60, 40, 0.65);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: #1e7f55;
+  box-shadow: 0 0 20px rgba(30, 127, 85, 0.6);
+  transform: translateY(-2px);
+}
 /* HERO */
 .hero {
   height: 100vh;
@@ -203,28 +220,4 @@ footer {
   mix-blend-mode: difference;
   z-index: 1000;
 }
-/* ===== PREMIUM NAV BUTTONS (FINAL) ===== */
 
-.nav-links {
-  display: flex;
-  gap: 16px;
-}
-
-.nav-links a {
-  padding: 10px 22px;
-  background: #0f3d2e; /* dark green */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.nav-links a:hover {
-  background: #1f6f52;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(31, 111, 82, 0.5);
-}
